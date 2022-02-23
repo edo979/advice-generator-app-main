@@ -6,6 +6,7 @@
 // IMPORTS
 // =======
 */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
 /*
 // RESET
 // =====
@@ -22,14 +23,88 @@
 // ==========
 */
 body {
-  font-family: sans-serif;
+  font-family: 'Manrope', sans-serif;
+  text-align: center;
+  color: #cee3e9;
+}
+
+.advice-id {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #52ffa8;
+}
+
+.advice-text {
+  font-size: 18px;
 }
 
 /*
 // LAYOUT
 // ======
 */
+body {
+  margin: 120px 15px 0;
+  background-color: #323a49;
+}
+
+.divider {
+  position: relative;
+  margin-top: 30px;
+}
+
+.btn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+}
+
 /*
 // COMPONENTS
 // ==========
 */
+.advice {
+  position: relative;
+  padding: 40px 30px 60px;
+  border-radius: 10px;
+  background-color: #4e5d73;
+}
+
+.advice h1 {
+  margin-bottom: 30px;
+}
+
+.divider {
+  height: 15px;
+  width: 100%;
+  background-color: #cee3e9;
+  -webkit-mask: url("../images/pattern-divider-mobile.svg");
+          mask: url("../images/pattern-divider-mobile.svg");
+  mask-type: alpha;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-position: center;
+          mask-position: center;
+}
+
+.btn {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: none;
+  background-color: #52ffa8;
+}
+
+.btn:hover {
+  -webkit-box-shadow: 0 0 30px rgba(82, 255, 168, 0.8);
+          box-shadow: 0 0 30px rgba(82, 255, 168, 0.8);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}

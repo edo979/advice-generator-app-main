@@ -3,10 +3,23 @@
 // ======
 */
 
+//### Primary
+
+$Light-Cyan: hsl(193, 38%, 86%);
+$Neon-Green: hsl(150, 100%, 66%);
+
+//### Neutral
+
+$Grayish-Blue: hsl(217, 19%, 38%);
+$Dark-Grayish-Blue: hsl(217, 19%, 24%);
+
+$break-point: 900px;
+
 /*
 // IMPORTS
 // =======
 */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
 
 /*
 // RESET
@@ -25,15 +38,85 @@
 */
 
 body {
-  font-family: sans-serif;
+  font-family: 'Manrope', sans-serif;
+  text-align: center;
+  color: $Light-Cyan;
+}
+
+.advice {
+  &-id {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $Neon-Green;
+  }
+
+  &-text {
+    font-size: 18px;
+  }
 }
 
 /*
 // LAYOUT
 // ======
 */
+body {
+  margin: 120px 15px 0;
+  background-color: $Dark-Grayish-Blue;
+}
+
+.divider {
+  position: relative;
+  margin-top: 30px;
+}
+
+.btn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
 
 /*
 // COMPONENTS
 // ==========
 */
+
+.advice {
+  position: relative;
+  padding: 40px 30px 60px;
+  border-radius: 10px;
+  background-color: $Grayish-Blue;
+
+  h1 {
+    margin-bottom: 30px;
+  }
+}
+
+.divider {
+  height: 15px;
+  width: 100%;
+  background-color: $Light-Cyan;
+  mask: url('../images/pattern-divider-mobile.svg');
+  mask-type: alpha;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+}
+
+.btn {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: none;
+  background-color: $Neon-Green;
+
+  &:hover {
+    box-shadow: 0 0 30px rgba($color: $Neon-Green, $alpha: 0.8);
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
